@@ -7,31 +7,31 @@ define([],
 			//The web map id
 			webmaps: [
 			{
-				id: "04744b7ad124458489ea821da3129352",
+				id: "beb7ad903eb8459c92165f1916c5375d",
 				title: "",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
 				// Hide legend and legend toggle for specific map by setting this option to false
 				legendVisible: true,
 				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
-				openLegendOnChange: false
+				openLegendOnChange: true
 			},{
-				id: "d0f1c5ae11d24c778d597f8bbddcf85f",
+				id: "f6dbfaddf0cf481caa4099f48caeec6f",
 				title: "",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
 				// Hide legend and legend toggle for specific map by setting this option to false
-				legendVisible: true,
+				legendVisible: false,
 				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
 				openLegendOnChange: false
 			},
 			{
-				id: "bb5a3da962ac4040b2f52f5869fddbd8",
+				id: "dd4c5d6628b74bb49ea4700c1e18f024",
 				title: "",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
 				// Hide legend and legend toggle for specific map by setting this option to false
-				legendVisible: true,
+				legendVisible: false,
 				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
 				openLegendOnChange: false
 			}
@@ -61,7 +61,7 @@ define([],
 			//	}
 			],
 			//Enter a title, if no title is specified, the first webmap's title is used.
-			title: "Add a title here",
+			title: "Maker Faire",
 			//Enter a subtitle, if no subtitle is specified, the first webmap's subtitle is used.
 			subtitle: "Add a subtitle here",
 			// If false, each tab will have a number on it. If true, the first tab will not have a number and the second tab will start counting at 1.
