@@ -40,7 +40,8 @@ define(["esri/map",
 		{
 			app = {
 				maps: [],
-				currentMap: null
+				currentMap: null,
+				ready: false
 			}
 
 			if (!configOptions.sharingurl) {
@@ -150,6 +151,7 @@ define(["esri/map",
 
 				map.legendVisible = configOptions.webmaps[app.maps.length].legendVisible;
 				map.openLegendOnChange = configOptions.webmaps[app.maps.length].openLegendOnChange;
+				map.accordionIndex = app.maps.length;
 
 				app.maps.push(map);
 				updateMobileNavigation();
@@ -179,7 +181,8 @@ define(["esri/map",
 					if (!map.firstLoad){
 						map.firstLoad = true;
 						setAccordionContentHeight();
-						if(map === app.maps[0]){
+						if(app.ready === false){
+							app.ready = true;
 							appReady();
 						}
 					}

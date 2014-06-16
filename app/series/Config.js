@@ -34,13 +34,23 @@ define([],
 				legendVisible: false,
 				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
 				openLegendOnChange: false
+			},
+			{
+				id: "f37107fcb19d43b287c857b8be0df042",
+				title: "",
+				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
+				showSingleTimeInstance: false,
+				// Hide legend and legend toggle for specific map by setting this option to false
+				legendVisible: false,
+				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
+				openLegendOnChange: false
 			}
 			// To add additional maps to the template, uncomment the below section for
 			// each map you would like to add. Webmap titles from ArcGIS Online will
 			// be used unless you fill in title attribute.
 			//, {
 			//
-			//	id: "739db23c3f674005a405c68e337f5011",
+			//	id: "f37107fcb19d43b287c857b8be0df042",
 			//	title: "",
 			//	// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 			//	showSingleTimeInstance: false,
@@ -61,9 +71,9 @@ define([],
 			//	}
 			],
 			//Enter a title, if no title is specified, the first webmap's title is used.
-			title: "Maker Faire",
+			title: "The White House Celebrates the Maker Faire Movement",
 			//Enter a subtitle, if no subtitle is specified, the first webmap's subtitle is used.
-			subtitle: "Add a subtitle here",
+			subtitle: "On June 18, the White House hosts a Maker Faire, bringing together exhibitors, prominent Makers, supporting universities and libraries, and supporting mayors to celebrate a nation of innovators.",
 			// If false, each tab will have a number on it. If true, the first tab will not have a number and the second tab will start counting at 1.
 			startCountOnSecondTab: false,
 			//Sync maps scale and location
