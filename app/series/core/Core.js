@@ -4,7 +4,10 @@ define(["esri/map",
 		"esri/widgets",
 		"dojo/has",
 		"storymaps/utils/Helper",
-		"storymaps/ui/TimeSlider"],
+		"storymaps/ui/TimeSlider",
+		"esri/symbols/SimpleMarkerSymbol",
+		"esri/symbols/SimpleLineSymbol",
+		"esri/Color"],
 	function(
 		Map,
 		Utils,
@@ -12,7 +15,10 @@ define(["esri/map",
 		Widgets,
 		Has,
 		Helper,
-		TimeSlider)
+		TimeSlider,
+		SimpleMarkerSymbol,
+		SimpleLineSymbol,
+		Color)
 	{
 		/**
 		 * Core
@@ -125,7 +131,14 @@ define(["esri/map",
 			$("#mobile-popup").append('<div class="mobile-popup-content"></div>');
 			$(".map").last().fadeTo(0,0);
 
+			var sms = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 35,
+			    new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
+			    new Color([0,0,0]), 2),
+			    new Color([0,255,0,0]));
+
 			var popup = new esri.dijit.Popup({
+				highlight: $("#application-window").width() > 780 ? false : true,
+				markerSymbol: sms
 			}, dojo.create("div"));
 
 			var mapDeferred = esri.arcgis.utils.createMap(configOptions.webmaps[app.maps.length].id,"map"+app.maps.length,{
